@@ -415,6 +415,16 @@ section.panel{
   font-weight: bold;
   left: 6%;
 }
+.block-2-container .shade-text{
+  position: absolute;
+  top: -23px;
+  font-size: 120px;
+  font-family: mtavruli-normal;
+  z-index: -1;
+  color: #f5f5f5;
+  font-weight: bold;
+  right: 22%;
+}
 .block-1 .img-block{
   float: right;
   width: 31%;
@@ -855,11 +865,12 @@ section.panel{
   background-repeat: no-repeat;
 }
 .section-8 .block-1-container{
-  height: 45%;
+  height: 50%;
   align-items: flex-start;
 }
 .section-8 .block-2-container{
-  height: 55%;
+  height: 50%;
+  padding-bottom: 6%;
 }
 .section-8 .block-1-container .text-container{
   padding-top: 14%;
@@ -892,6 +903,16 @@ section.panel{
   font-size: 100px;
   font-family: mtavruli-normal;
   color: rgba(255, 82, 82, .3);
+}
+.section-8 .block-2-container .shade-text{
+      position: absolute;
+    top: -11px;
+    font-size: 110px;
+    font-family: mtavruli-normal;
+    z-index: -1;
+    color: #f5f5f5;
+    font-weight: bold;
+    right: 27%;
 }
 
 
@@ -1136,6 +1157,11 @@ section.panel{
     font-size: 100px;
     top: 0;
   }
+  .block-2-container .shade-text{
+    font-size: 100px;
+    top: -26px;
+    right: 19%;
+  }
   .block-1 .text-container{
     padding-top: 17%;
   }
@@ -1145,6 +1171,11 @@ section.panel{
   .section-4 .block-1 .shade-bg,
   .section-4 .block-1 .shade-opacity{
     bottom: -4%;
+  }
+  .section-8 .block-2-container .shade-text{
+    top: 6px;
+    font-size: 70px;
+    right: 33%;
   }
 
 }

@@ -881,3 +881,26 @@ var TxtType = function(el, toRotate, period) {
         $('.progress .progress-left .progress-bar').css({ transform : 'rotate(' + (anim) +'deg)' })
       }
     }
+
+
+
+    var vue = new Vue({
+      el: '#app',
+      data: {
+        formOpen: false,
+        productData: {
+          title: '',
+          rating: '',
+          price: '',
+          list_price: '',
+          is_featured: false
+        }
+      },
+      methods: {
+        cancel: function() {
+          this.formOpen = false;
+          this.resetForm();
+        }
+      }
+    })
+
