@@ -88,7 +88,7 @@
 .container-resurces {
   position: absolute;
   z-index: 22;
-  bottom: -37%;
+  bottom: -34%;
   left: 50%;
   transform: translateX(-50%);
 }

@@ -1144,6 +1144,9 @@ section.panel{
   .section-8 .block-1-container .text-container{
     padding-top: 17%;
   }
+  .container-resurces{
+    bottom: -16%;
+  }
 }
 
 @media only screen and (max-width: 1366px){
