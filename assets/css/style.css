@@ -965,6 +965,9 @@ section.panel{
 .tabs-navigation a.active{
   color:#fff;
 }
+.tabs-wrapper a.active:hover{
+ color:#fff!important; 
+}
 .tabs-navigation a i{
   margin-right:5px;
 }
