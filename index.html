@@ -229,8 +229,17 @@
 				    		<h2 class="title red mg-btm-15" id="table-reveal-1"><span style="display: inline-block;">ყველა ქართული ასო-ნიშანი</span></h2>
 				    		<p class="text gray" id="table-reveal-2">აქ მოცემულია ყველა ქართული ასო-ნიშანი და სიმბოლო რომელიც უნიკოდის მიერაა მხარდაჭერილი. ცხრილში მოცემულია დიაკრიტიკული ნიშებიც, რომელიც საქართველოში არსებული სხვადასხვა ენისათვის გამოიყენება. მათ ცალკე კოდები არ აქვთ მინიჭებული თუმცა მათი გენერირება კომბინირებადი ნიშების მეშვეობით არის შესაძლებელი.</p>
 				    	</div>
+				    	<div class="tabs-wrapper">
+						  <nav class="tabs-navigation">
+						    <div class="selector"></div>
+						    <a class="active">ასომთავრული</a>
+						    <a >მხედრული</a>
+						    <a >მთავრული</a>
+						    <a >ნუსხური</a>
+						  </nav>
+						</div>
 				    	<div class="tabs">
-							<ul class="nav" id="myTab" role="tablist">
+							<!-- <ul class="nav" id="myTab" role="tablist">
 								<li class="nav-item">
 									<a class="gray active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ასომთავრული</a>
 								</li>
@@ -243,12 +252,13 @@
 								<li class="nav-item">
 									<a class="gray" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">ნუსხური</a>
 								</li>
-							</ul>
+							</ul> -->
 
 							<div class="tab-content">
 							<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
 								<span class="tab-head"><b>Ⴀ</b>დან - <b>Ⴭ</b>მდე</span>
-								<ul class="tab-1"></ul>
+								<ul class="inner-tab tab-1"></ul>
+								<ul class="inner-tab tab-1-2"></ul>
 							</div>
 							<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
 							<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">3</div>
@@ -444,7 +454,7 @@
 	<script type="text/javascript" src="assets/js/script.js"></script>
 
 	<script>
-		var asomtavruli = {
+		var asomtavruli_1 = {
 			"10A0": "Ⴀ", 
 			"10A1": "Ⴁ",
 			"10A2": "Ⴂ",
@@ -492,7 +502,10 @@
 			"10CC": "",
 			"10CD": "Ⴭ",
 			"10CE": "",
-			"10CF": "",
+			"10CF": ""
+		};
+
+		var asomtavruli_2 = {
 			"2D00": "ⴀ",
 			"2D01": "ⴁ",
 			"2D02": "ⴂ",
@@ -541,15 +554,19 @@
 			"2D2D": "ⴭ",
 			"2D2E": "",
 			"2D2F": ""
-		};
+		}
 
-		var res = '';
+		var res_1 = res_2 = '';
 
-		$.map(asomtavruli, function(item, index) {
-			res += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
+		$.map(asomtavruli_1, function(item, index) {
+			res_1 += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
+		});
+		$.map(asomtavruli_2, function(item, index) {
+			res_2 += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
 		});
 
-		$('.tab-1').append(res);
+		$('.tab-1').append(res_1);
+		$('.tab-1-2').append(res_2);
 
 	</script>
 </body>

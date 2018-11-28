@@ -883,12 +883,40 @@ var TxtType = function(el, toRotate, period) {
     }
 
 
-$('.resources-btn').on('click',  function(event) {
-    $('.resources').addClass('open');
-    $('.resources-btn').css('display', 'none');
+    $('.resources-btn').on('click',  function(event) {
+        $('.resources').addClass('open');
+        $('.resources-btn').css('display', 'none');
+    });
+
+    $('.cancel').on('click', function(event) {
+        $('.resources').removeClass('open');
+       $('.resources-btn').css('display', 'block'); 
+    });
+
+
+
+
+jQuery(document).ready(function($) {
+
+var tabs = $('.tabs-navigation');
+var items = $('.tabs-navigation').find('a').length;
+var selector = $(".tabs-navigation").find(".selector");
+var activeItem = tabs.find('.active');
+var activeWidth = $(activeItem).innerWidth();
+$(".selector").css({
+  "left": activeItem.position.left + "px", 
+  "width": activeWidth + "px"
 });
 
-$('.cancel').on('click', function(event) {
-    $('.resources').removeClass('open');
-   $('.resources-btn').css('display', 'block'); 
+$(".tabs-navigation").on("click","a",function(){
+  $('.tabs-navigation a').removeClass("active");
+  $(this).addClass('active');
+  var activeWidth = $(this).innerWidth();
+  var itemPos = $(this).position();
+  $(".selector").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+  });
+});
+
 });
