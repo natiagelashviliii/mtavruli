@@ -93,7 +93,7 @@
   transform: translateX(-50%);
 }
 
-.resources {
+/*.resources {
   transition: all 0.3s ease;
   background-color: #ff5252;
   height: 45px;
@@ -103,7 +103,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
   cursor: pointer;
-}
+}*/
 .resources.open {
   background-color: #FAFAFA;
   padding: 18px 32px;
@@ -118,12 +118,12 @@
   transition-delay: 0.3s;
   height: auto;
 }
-.resources .resources-btn {
+/*.resources .resources-btn {
     text-align: center;
     font-weight: bold;
     color: #f7f7f7;
     font-size: 12px;
-}
+}*/
 .resources div.resources-inner {
   transition: none;
   opacity: 0;

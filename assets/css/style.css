@@ -985,7 +985,155 @@ section.panel{
 .tabs{
   float: left;
 }
+.progress.bottom{
+  cursor: pointer;
+}
 
+
+/* button animation */
+.skew-button {
+  cursor: pointer;
+  outline: none;
+  /*-webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);*/
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font: 12px mtavruli-normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ff5252;
+}
+.skew-button span {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 35px;
+  z-index: 3;
+}
+.skew-button:before,
+.skew-button span:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*width: 99%;
+  height: 50px;*/
+  width: 97%;
+  height: 40px;
+  border: 1px solid #ff5252;
+  z-index: 2;
+  box-sizing: unset;
+}
+.skew-button span:before {
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  z-indeX: -1;
+}
+.skew-button:after {
+  transition: all 100ms ease-out;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 82, 82, 0.8);
+  border: 1px solid transparent;
+  z-index: 1;
+}
+.skew-button:hover span:before {
+  -webkit-animation: fill .5s ease-out;
+          animation: fill .5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.skew-button:hover:after {
+  -webkit-animation: swoosh .7s ease-in;
+          animation: swoosh .7s ease-in;
+}
+
+@-webkit-keyframes swoosh {
+  0% {
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+  }
+  20% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+  }
+  21% {
+    -webkit-transform-origin: right center;
+            transform-origin: right center;
+  }
+  50% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right center;
+            transform-origin: right center;
+  }
+}
+
+@keyframes swoosh {
+  0% {
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+  }
+  20% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+  }
+  21% {
+    -webkit-transform-origin: right center;
+            transform-origin: right center;
+  }
+  50% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right center;
+            transform-origin: right center;
+  }
+}
+@-webkit-keyframes fill {
+  20% {
+    opacity: .5;
+    border-width: 15px;
+  }
+  100% {
+    opacity: .5;
+    border-width: 1px;
+  }
+}
+@keyframes fill {
+  20% {
+    opacity: .5;
+    border-width: 15px;
+  }
+  100% {
+    opacity: .5;
+    border-width: 1px;
+  }
+}
 
 
 

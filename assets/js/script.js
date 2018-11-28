@@ -898,25 +898,38 @@ var TxtType = function(el, toRotate, period) {
 
 jQuery(document).ready(function($) {
 
-var tabs = $('.tabs-navigation');
-var items = $('.tabs-navigation').find('a').length;
-var selector = $(".tabs-navigation").find(".selector");
-var activeItem = tabs.find('.active');
-var activeWidth = $(activeItem).innerWidth();
-$(".selector").css({
-  "left": activeItem.position.left + "px", 
-  "width": activeWidth + "px"
-});
+    var tabs = $('.tabs-navigation');
+    var items = $('.tabs-navigation').find('a').length;
+    var selector = $(".tabs-navigation").find(".selector");
+    var activeItem = tabs.find('.active');
+    var activeWidth = $(activeItem).innerWidth();
+    $(".selector").css({
+      "left": activeItem.position.left + "px", 
+      "width": activeWidth + "px"
+    });
 
-$(".tabs-navigation").on("click","a",function(){
-  $('.tabs-navigation a').removeClass("active");
-  $(this).addClass('active');
-  var activeWidth = $(this).innerWidth();
-  var itemPos = $(this).position();
-  $(".selector").css({
-    "left":itemPos.left + "px", 
-    "width": activeWidth + "px"
-  });
+    $(".tabs-navigation").on("click","a",function(){
+      $('.tabs-navigation a').removeClass("active");
+      $(this).addClass('active');
+      var activeWidth = $(this).innerWidth();
+      var itemPos = $(this).position();
+      $(".selector").css({
+        "left":itemPos.left + "px", 
+        "width": activeWidth + "px"
+      });
+    });
+
+    $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $('.progress-value').html('<div class="arrow-up"><img src="assets/img/arrow-up.png"></div>');
+       $('.progress').addClass('bottom');
+    } else {
+        $('.progress').removeClass('bottom').unbind();
+
+    }
+    $('.progress.bottom').on('click', function(event) {
+         $("html, body").animate({ scrollTop: 0 }, 2000);
+    });
 });
 
 });
