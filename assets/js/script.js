@@ -883,24 +883,12 @@ var TxtType = function(el, toRotate, period) {
     }
 
 
+$('.resources-btn').on('click',  function(event) {
+    $('.resources').addClass('open');
+    $('.resources-btn').css('display', 'none');
+});
 
-    var vue = new Vue({
-      el: '#app',
-      data: {
-        formOpen: false,
-        productData: {
-          title: '',
-          rating: '',
-          price: '',
-          list_price: '',
-          is_featured: false
-        }
-      },
-      methods: {
-        cancel: function() {
-          this.formOpen = false;
-          this.resetForm();
-        }
-      }
-    })
-
+$('.cancel').on('click', function(event) {
+    $('.resources').removeClass('open');
+   $('.resources-btn').css('display', 'block'); 
+});
