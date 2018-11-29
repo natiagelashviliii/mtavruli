@@ -135,7 +135,7 @@
     .setTween(new TimelineMax()
                 .fromTo("section.panel.section-8",    1, {y:  "0"}, {y: lastPercent, ease: Linear.easeNone})
              )
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
 
