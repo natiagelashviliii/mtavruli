@@ -236,22 +236,6 @@ var fade7 = new ScrollMagic.Scene({triggerElement: '#fade7', duration: '90%', tr
     });
 
 
-// var controller3 = new ScrollMagic.Controller();
-
-// var fade1 = new ScrollMagic.Scene({triggerElement: '#fade1', duration: '100%', triggerHook: "onEnter"})
-//     .setTween(TweenMax.to('.fadeout-section1', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-//     .addIndicators()
-//     .addTo(controller1); 
-
-//     fade1.on("leave", function (event) {
-//         $('.fadeout-section1').css('display', 'none');
-//     });
-//     fade1.on("enter", function (event) {
-//         $('.fadeout-section1').css('display', 'block');
-//     });
-
-
-
 $('nav a').on('click',function() {
     controller.scrollTo($(this).attr('href')); 
 });
