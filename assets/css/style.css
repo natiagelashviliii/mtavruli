@@ -137,7 +137,7 @@ nav {
     top: 1430%;
 }
 #triggers #t8 {
-    top: 1530%;
+    top: 1535%;
 }
 
 #fade-triggers {
@@ -286,6 +286,9 @@ section.panel{
 .content{
   height: 100%;
   position: relative;
+}
+section.panel:last-child{
+  box-shadow: none;
 }
 
 /* fadeouts */
@@ -1371,9 +1374,6 @@ section.panel{
   }
   .section-8 .block-1-container .text-container{
     padding-top: 17%;
-  }
-  .container-resurces{
-    bottom: -16%;
   }
   .tabs-wrapper{
     margin-top: 1%;

@@ -17,16 +17,17 @@
        var durationNm = "1750%";
        var lastPercent = "-59%";
     } else {
-        var durationNm = "1700%";
+        var durationNm = "1900%";
        var lastPercent = "-41%";
     }
+    console.log($(window).width());
 
     var controller = new ScrollMagic.Controller();
 
     var scene = new ScrollMagic.Scene({
             triggerElement: "#pinContainer",
             triggerHook: "onLeave",
-            duration: "1700%"
+            duration: durationNm
         })
         .setPin("#pinContainer")
         // .addIndicators()
@@ -129,12 +130,12 @@
     var scene8  = new ScrollMagic.Scene({
         triggerElement: "#triggers #t8",
         triggerHook: "onLeave",
-        duration: "100%"
+        duration: "150%"
     })
     .setTween(new TimelineMax()
                 .fromTo("section.panel.section-8",    1, {y:  "0"}, {y: lastPercent, ease: Linear.easeNone})
              )
-    // .addIndicators()
+    .addIndicators()
     .addTo(controller);
 
 
@@ -890,7 +891,7 @@ var TxtType = function(el, toRotate, period) {
 
     $('.cancel').on('click', function(event) {
         $('.resources').removeClass('open');
-       $('.resources-btn').css('display', 'block'); 
+       $('.resources-btn').css('display', 'inline-block'); 
     });
 
 
