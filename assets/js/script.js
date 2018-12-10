@@ -14,10 +14,10 @@
 });
 
     if ($(window).width() <= 1370) {
-       var durationNm = "1750%";
+       var durationNm = "2110%";
        var lastPercent = "-59%";
     } else {
-        var durationNm = "1900%";
+        var durationNm = "2200%";
        var lastPercent = "-41%";
     }
     console.log($(window).width());

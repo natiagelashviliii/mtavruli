@@ -119,25 +119,25 @@ nav {
     top: 0;
 }
 #triggers #t2 {
-    top: 100%;
+    top: 150%;
 }
 #triggers #t3 {
-    top: 550%;
+    top: 650%;
 }
 #triggers #t4 {
-    top: 700%;
+    top: 850%;
 }
 #triggers #t5 {
-    top: 1150%;
+    top: 1350%;
 }
 #triggers #t6 {
-    top: 1250%;
+    top: 1500%;
 }
 #triggers #t7 {
-    top: 1430%;
+    top: 1750%;
 }
 #triggers #t8 {
-    top: 1535%;
+    top: 1900%;
 }
 
 #fade-triggers {
@@ -151,22 +151,22 @@ nav {
   top: 100%;
 }
 #fade-triggers #fade2{
-  top: 360%;
+  top: 420%;
 }
 #fade-triggers #fade3{
-  top: 650%;
+  top: 750%;
 }
 #fade-triggers #fade4{
-  top: 1040%;
+  top: 1170%;
 }
 #fade-triggers #fade5{
-  top: 1250%;
+  top: 1450%;
 }
 #fade-triggers #fade6{
-  top: 1435%;
+  top: 1690%;
 }
 #fade-triggers #fade7{
-  top: 1530%;
+  top: 1850%;
 }
 
 #rev1{
@@ -181,47 +181,47 @@ nav {
 }
 #rev3{
   position: absolute;
-  top: 450%;
+  top: 470%;
   z-index: 17; 
 }
 #rev4{
   position: absolute;
-  top: 670%;
+  top: 700%;
   z-index: 17; 
 }
 #rev5{
   position: absolute;
-  top: 900%;
+  top: 1000%;
   z-index: 17; 
 }
 #rev6{
   position: absolute;
-  top: 1200%;
+  top: 1300%;
   z-index: 17; 
 }
 #rev7{
   position: absolute;
-  top: 1300%;
+  top: 1500%;
   z-index: 17; 
 }
 #rev8{
   position: absolute;
-  top: 1370%;
+  top: 1600%;
   z-index: 17; 
 }
 #rev9{
   position: absolute;
-  top: 1450%;
+  top: 1700%;
   z-index: 17; 
 }
 #rev10{
   position: absolute;
-  top: 1570%;
+  top: 1900%;
   z-index: 17; 
 }
 #rev11{
   position: absolute;
-  top: 1650%;
+  top: 2000%;
   z-index: 17; 
 }
 
@@ -669,6 +669,7 @@ section.panel:last-child{
 }
 .tabs-block{
   padding-top: 6%;
+  overflow: hidden;
 }
 .tabs .nav{
   margin-bottom: 2%;
@@ -1497,4 +1498,41 @@ section.panel:last-child{
 
 @media only screen and (max-width: 400px){
   
+}
+
+@media only screen and (max-height: 750px){
+  .section-5 .block .text-container{
+    width: 70%;
+  }
+  .tabs-wrapper{
+    margin-bottom: 1%;
+  }
+  .inner-tab li span:first-child{
+    font-size: 18px;
+    height: 24px;
+  }
+  .inner-tab li span:last-child{
+    font-size: 10px;
+  }
+  .block-1-container{
+    height: 45%;
+  }
+  .block-2-container{
+    height: 55%;
+  }
+  .section-4 .block-1-container{
+    height: 42%;
+  }
+  .section-4 .block-2-container{
+    height: 58%;
+  }
+  .block-unicode .shade-bg{
+    height: 500px;
+  }
+  .section-4 .block-2-container{
+    padding-bottom: 35px;
+  }
+  .section-8 .block-2-container .shade-text{
+    top: 0;
+  }
 }
