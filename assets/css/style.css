@@ -1733,6 +1733,9 @@ section.panel:last-child{
 }
 
 @media only screen and (max-width: 768px){
+  .section-1 .title{
+    line-height: 0px!important;
+  }
   .section-1 .title .block-revealer__content{
     font-size: 70px;
     line-height: 60px;
@@ -1943,9 +1946,6 @@ section.panel:last-child{
 @media only screen and (max-width: 460px){
   .section-1 .title .block-revealer__content{
     font-size: 50px;
-  }
-  .section-1 .title{
-    line-height: 100px;
   }
   .typewrite span{
     font-size: 60px!important;
