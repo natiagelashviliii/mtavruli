@@ -1776,6 +1776,10 @@ section.panel:last-child{
   }
   .section-3 .block{
     background: transparent!important;
+    height: unset;
+  }
+  .panel.section-3{
+    height: unset;
   }
   .layer-photo{
     bottom: 24px;
@@ -1904,6 +1908,10 @@ section.panel:last-child{
     width: 87%;
     text-align: center;
   }
+  .section-8 .block-2-container{
+    margin-top: 9%;
+    margin-bottom: 11%;
+  }
 }
 
 
@@ -1958,5 +1966,11 @@ section.panel:last-child{
   }
   .section-7{
     height: 87vw;
+  }
+}
+
+@media only screen and (max-width: 360px){
+  .section-4 .block-2-container{
+    padding-bottom: 80px;
   }
 }
