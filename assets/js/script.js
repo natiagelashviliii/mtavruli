@@ -1,4 +1,4 @@
-  var myScroll = $("html").easeScroll({
+var myScroll = $("html").easeScroll({
   frameRate: 60,
   animationTime: 1000,
   stepSize: 120,
@@ -12,6 +12,9 @@
   touchpadSupport: true,
   fixedBackground: true
 });
+console.log($(window).width());
+
+if ($(window).width() > 991) {
 
     if ($(window).width() <= 1370) {
        var durationNm = "2110%";
@@ -20,7 +23,6 @@
         var durationNm = "2200%";
        var lastPercent = "-41%";
     }
-    console.log($(window).width());
 
     var controller = new ScrollMagic.Controller();
 
@@ -140,115 +142,112 @@
 
 
 
-var controller1 = new ScrollMagic.Controller();
+    var controller1 = new ScrollMagic.Controller();
 
-var fade1 = new ScrollMagic.Scene({triggerElement: '#fade1', duration: '100%', triggerHook: "onEnter"})
-	.setTween(TweenMax.to('.fadeout-section1', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-	// .addIndicators()
-	.addTo(controller1); 
+    var fade1 = new ScrollMagic.Scene({triggerElement: '#fade1', duration: '100%', triggerHook: "onEnter"})
+    	.setTween(TweenMax.to('.fadeout-section1', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+    	// .addIndicators()
+    	.addTo(controller1); 
 
-	fade1.on("leave", function (event) {
-        $('.fadeout-section1').css('display', 'none');
+    	fade1.on("leave", function (event) {
+            $('.fadeout-section1').css('display', 'none');
+        });
+        fade1.on("enter", function (event) {
+    	    $('.fadeout-section1').css('display', 'block');
+    	});
+
+    var fade2 = new ScrollMagic.Scene({triggerElement: '#fade2', duration: '250%', triggerHook: "onEnter"})
+    	.setTween(TweenMax.to('.fadeout-section2', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+    	// .addIndicators()
+    	.addTo(controller1); 
+
+    	fade2.on("leave", function (event) {
+    	    $('.fadeout-section2').css('display', 'none');
+    	});
+    	fade2.on("enter", function (event) {
+    	    $('.fadeout-section2').css('display', 'block');
+    	});
+
+
+    var fade3 = new ScrollMagic.Scene({triggerElement: '#fade3', duration: '90%', triggerHook: "onEnter"})
+    	.setTween(TweenMax.to('.fadeout-section-3', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+    	// .addIndicators()
+    	.addTo(controller1); 
+
+
+    	fade3.on("leave", function (event) {
+    	    $('.fadeout-section-3').css('display', 'none');
+    	});
+    	fade3.on("enter", function (event) {
+    	    $('.fadeout-section-3').css('display', 'block');
+    	});
+
+
+    var fade4 = new ScrollMagic.Scene({triggerElement: '#fade4', duration: '90%', triggerHook: "onEnter"})
+        .setTween(TweenMax.to('.fadeout-section-4', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+        // .addIndicators()
+        .addTo(controller1); 
+
+
+        fade4.on("leave", function (event) {
+            $('.fadeout-section-4').css('display', 'none');
+        });
+        fade4.on("enter", function (event) {
+            $('.fadeout-section-4').css('display', 'block');
+        });
+
+
+    var fade5 = new ScrollMagic.Scene({triggerElement: '#fade5', duration: '90%', triggerHook: "onEnter"})
+        .setTween(TweenMax.to('.fadeout-section-5', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+        // .addIndicators()
+        .addTo(controller1); 
+
+
+        fade5.on("leave", function (event) {
+            $('.fadeout-section-5').css('display', 'none');
+        });
+        fade5.on("enter", function (event) {
+            $('.fadeout-section-5').css('display', 'block');
+        });
+
+    var fade6 = new ScrollMagic.Scene({triggerElement: '#fade6', duration: '90%', triggerHook: "onEnter"})
+        .setTween(TweenMax.to('.fadeout-section-6', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+        // .addIndicators()
+        .addTo(controller1); 
+
+
+        fade6.on("leave", function (event) {
+            $('.fadeout-section-6').css('display', 'none');
+        });
+        fade6.on("enter", function (event) {
+            $('.fadeout-section-6').css('display', 'block');
+        });
+
+
+    var fade7 = new ScrollMagic.Scene({triggerElement: '#fade7', duration: '90%', triggerHook: "onEnter"})
+        .setTween(TweenMax.to('.fadeout-section-7', 1, { opacity: 0 , ease:Power1.easeInOut  }))
+        // .addIndicators()
+        .addTo(controller1); 
+
+
+        fade7.on("leave", function (event) {
+            $('.fadeout-section-7').css('display', 'none');
+        });
+        fade7.on("enter", function (event) {
+            $('.fadeout-section-7').css('display', 'block');
+        });
+
+    $('nav a').on('click',function() {
+        controller.scrollTo($(this).attr('href')); 
     });
-    fade1.on("enter", function (event) {
-	    $('.fadeout-section1').css('display', 'block');
-	});
-
-var fade2 = new ScrollMagic.Scene({triggerElement: '#fade2', duration: '250%', triggerHook: "onEnter"})
-	.setTween(TweenMax.to('.fadeout-section2', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-	// .addIndicators()
-	.addTo(controller1); 
-
-	fade2.on("leave", function (event) {
-	    $('.fadeout-section2').css('display', 'none');
-	});
-	fade2.on("enter", function (event) {
-	    $('.fadeout-section2').css('display', 'block');
-	});
 
 
-var fade3 = new ScrollMagic.Scene({triggerElement: '#fade3', duration: '90%', triggerHook: "onEnter"})
-	.setTween(TweenMax.to('.fadeout-section-3', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-	// .addIndicators()
-	.addTo(controller1); 
-
-
-	fade3.on("leave", function (event) {
-	    $('.fadeout-section-3').css('display', 'none');
-	});
-	fade3.on("enter", function (event) {
-	    $('.fadeout-section-3').css('display', 'block');
-	});
-
-
-var fade4 = new ScrollMagic.Scene({triggerElement: '#fade4', duration: '90%', triggerHook: "onEnter"})
-    .setTween(TweenMax.to('.fadeout-section-4', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-    // .addIndicators()
-    .addTo(controller1); 
-
-
-    fade4.on("leave", function (event) {
-        $('.fadeout-section-4').css('display', 'none');
-    });
-    fade4.on("enter", function (event) {
-        $('.fadeout-section-4').css('display', 'block');
+    // change behaviour of controller to animate scroll instead of jump
+    controller.scrollTo(function (newpos) {
+    	TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
     });
 
-
-var fade5 = new ScrollMagic.Scene({triggerElement: '#fade5', duration: '90%', triggerHook: "onEnter"})
-    .setTween(TweenMax.to('.fadeout-section-5', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-    // .addIndicators()
-    .addTo(controller1); 
-
-
-    fade5.on("leave", function (event) {
-        $('.fadeout-section-5').css('display', 'none');
-    });
-    fade5.on("enter", function (event) {
-        $('.fadeout-section-5').css('display', 'block');
-    });
-
-var fade6 = new ScrollMagic.Scene({triggerElement: '#fade6', duration: '90%', triggerHook: "onEnter"})
-    .setTween(TweenMax.to('.fadeout-section-6', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-    // .addIndicators()
-    .addTo(controller1); 
-
-
-    fade6.on("leave", function (event) {
-        $('.fadeout-section-6').css('display', 'none');
-    });
-    fade6.on("enter", function (event) {
-        $('.fadeout-section-6').css('display', 'block');
-    });
-
-
-var fade7 = new ScrollMagic.Scene({triggerElement: '#fade7', duration: '90%', triggerHook: "onEnter"})
-    .setTween(TweenMax.to('.fadeout-section-7', 1, { opacity: 0 , ease:Power1.easeInOut  }))
-    // .addIndicators()
-    .addTo(controller1); 
-
-
-    fade7.on("leave", function (event) {
-        $('.fadeout-section-7').css('display', 'none');
-    });
-    fade7.on("enter", function (event) {
-        $('.fadeout-section-7').css('display', 'block');
-    });
-
-
-$('nav a').on('click',function() {
-    controller.scrollTo($(this).attr('href')); 
-});
-
-
-
-
-
-
-// change behaviour of controller to animate scroll instead of jump
-controller.scrollTo(function (newpos) {
-	TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
-});
+}
 
 //  bind scroll to anchor links
 $(document).on("click", "a.n[href^='#']", function (e) {
@@ -269,13 +268,11 @@ $(document).on("click", "a.n[href^='#']", function (e) {
 
 
 
-
+if ($(window).width() > 991) {
 
 // reveal 
 
 jQuery(document).ready(function($) {
-
-
 
     //section-2-1
     watcher_1 = scrollMonitor.create(document.getElementById('rev1', { bottom: 150 }));			
@@ -622,8 +619,6 @@ jQuery(document).ready(function($) {
         watcher_8_2.destroy();
     });
 
-
-
 });
 
 
@@ -637,9 +632,12 @@ $(document).mousemove(function(e) {
     $('#cursor-shadow').css({left: e.pageX, top:e.pageY});
 });
 
+}
 
 $( window ).resize(function() {
-  location.reload();
+    if ($(window).width() > 991) {
+        location.reload();
+    }
 });
 
 
@@ -733,10 +731,10 @@ var TxtType = function(el, toRotate, period) {
     var parallaxInstance = new Parallax(ParlScene3, {});
 
 
-
-    var ParlScene4 = document.getElementById('layer-photo');
-    var parallaxInstance = new Parallax(ParlScene4, {});
-
+    if ($(window).width() > 991) {
+        var ParlScene4 = document.getElementById('layer-photo');
+        var parallaxInstance = new Parallax(ParlScene4, {});
+    }
 
 
     var ParlScene5 = document.getElementById('tags-1');
