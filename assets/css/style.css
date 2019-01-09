@@ -1735,6 +1735,10 @@ section.panel:last-child{
     padding: unset;
     width: 20%;
   }
+  .inner-tab li span:first-child{
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 768px){
