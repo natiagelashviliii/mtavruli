@@ -1731,6 +1731,10 @@ section.panel:last-child{
   .progress{
     display: none;
   }
+  .inner-tab li{
+    padding: unset;
+    width: 20%;
+  }
 }
 
 @media only screen and (max-width: 768px){
