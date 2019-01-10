@@ -900,6 +900,26 @@ jQuery(document).ready(function($) {
         "left":itemPos.left + "px", 
         "width": activeWidth + "px"
       });
+
+
+        switch($(this).data('attr')){
+            case "tab-1":
+                buildTab(tab_1_1, tab_1_2); 
+            return false;
+
+            case "tab-2":
+                buildTab(tab_2_1, tab_2_2);
+            return false;
+
+            case "tab-3":
+                buildTab(tab_3_1, tab_3_1);
+            return false;
+
+            case "tab-4":
+            return false;
+        }
+
+
     });
 
     $(window).scroll(function() {

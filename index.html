@@ -234,10 +234,10 @@
 				    	<div class="tabs-wrapper">
 						  <nav class="tabs-navigation">
 						    <div class="selector"></div>
-						    <a class="active" data-attr="asomtavruli">ასომთავრული</a>
-						    <a data-attr="mxedruli">მხედრული</a>
-						    <a data-attr="mtavruli">მთავრული</a>
-						    <a data-attr="nusxuri">ნუსხური</a>
+						    <a class="active" data-attr="tab-1">ასომთავრული</a>
+						    <a data-attr="tab-2">მხედრული</a>
+						    <a data-attr="tab-3">მთავრული</a>
+						    <a data-attr="tab-4">ნუსხური</a>
 						  </nav>
 						</div>
 				    	<div class="tabs">
@@ -460,7 +460,7 @@
 	<script type="text/javascript" src="assets/js/script.js"></script>
 
 	<script>
-		var asomtavruli_1 = {
+		var tab_1_1 = {
 			"10A0": "Ⴀ", 
 			"10A1": "Ⴁ",
 			"10A2": "Ⴂ",
@@ -511,7 +511,7 @@
 			"10CF": ""
 		};
 
-		var asomtavruli_2 = {
+		var tab_1_2 = {
 			"2D00": "ⴀ",
 			"2D01": "ⴁ",
 			"2D02": "ⴂ",
@@ -562,20 +562,8 @@
 			"2D2F": ""
 		}
 
-		var res_1 = res_2 = '';
-
-		$.map(asomtavruli_1, function(item, index) {
-			res_1 += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
-		});
-		$.map(asomtavruli_2, function(item, index) {
-			res_2 += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
-		});
-
-		$('.tab-1').append(res_1);
-		$('.tab-1-2').append(res_2);
-
-
-		var mxedruli = {
+		//mxedruli
+		var tab_2_1 = {
 			"10D0" : "ა",
 			"10D1" : "ბ",
 			"10D2" : "გ",
@@ -624,8 +612,8 @@
 			"10FF" : "ჿ"
 		}
 
-
-		var mtavruli = {
+		//mtavruli
+		var tab_2_2 = {
 			"1C90" : "ა",
 			"1C91" : "ბ",
 			"1C92" : "გ",
@@ -673,6 +661,32 @@
 			"1CBE" : "",
 			"1CBF" : ""
 		}
+
+
+		var tab_3_1 = {
+			0: '',
+			1: ''
+		}
+
+		function buildTab(tab1, tab2){
+			var res_1 = res_2 = '';
+
+			$.map(tab1, function(item, index) {
+				res_1 += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
+			});
+
+			$.map(tab2, function(item, index) {
+				res_2 += '<li><span>'+ item +'</span><span>'+ index +'</span></li>'
+			});
+			
+			$('.tab-1').html(res_1);
+			$('.tab-1-2').html(res_2);
+		}
+
+		buildTab(tab_1_1, tab_1_2);
+
+
+
 
 	</script>
 </body>
