@@ -918,6 +918,11 @@ jQuery(document).ready(function($) {
             case "tab-4":
                 buildTab(tab_4_1);
             return false;
+
+            case "tab-5":
+                $('.inner-tab').css('display', 'none');
+                $('.tab-others').css('display', 'block')
+            return false;
         }
 
 

@@ -667,6 +667,9 @@ section.panel:last-child{
   width: 50%;
   padding: 0 5px;
 }
+.tabs{
+  width: 100%;
+}
 .tabs-block{
   padding-top: 6%;
   overflow: hidden;
@@ -1743,6 +1746,12 @@ section.panel:last-child{
     width: 100%;
     text-align: center;
   }
+  .tabs-navigation .selector{
+    display: none;
+  }
+  .tabs-navigation a.active{
+    background: rgba(255, 82, 82);
+  }
 }
 
 @media only screen and (max-width: 768px){
@@ -1920,12 +1929,6 @@ section.panel:last-child{
   .section-8 .block-1-container{
     margin-top: 0;
   }
-  .tabs-navigation .selector{
-    display: none;
-  }
-  .tabs-navigation a.active{
-    background: rgba(255, 82, 82);
-  }
   .section-7 .text-container{
     width: 87%;
   }
@@ -1959,14 +1962,13 @@ section.panel:last-child{
   }
   .inner-tab li span:first-child{
     font-size: 18px;
-    height: 24px;
   }
   .inner-tab li span:last-child{
     font-size: 10px;
   }
-  .block-1-container{
+  /*.block-1-container{
     height: 45%;
-  }
+  }*/
   .block-2-container{
     padding-left: 50px;
   }

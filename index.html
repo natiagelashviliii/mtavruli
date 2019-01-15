@@ -240,6 +240,7 @@
 						    <a data-attr="tab-2">ᲛᲮᲔᲓᲠᲣᲚᲘ</a>
 						    <a data-attr="tab-3">ᲛᲗᲐᲕᲠᲣᲚᲘ</a>
 						    <a data-attr="tab-4">ᲜᲣᲡᲮᲣᲠᲘ</a>
+						    <a data-attr="tab-5">ᲮᲮᲕᲐ</a>
 						  </nav>
 						</div>
 				    	<div class="tabs">
@@ -293,6 +294,11 @@
 								    <li><span>Ჽ</span><span>1CBD</span></li>
 								    <li><span>Ჾ</span><span>1CBE</span></li>
 								    <li><span>Ჿ</span><span>1CBF</span></li>
+								</ul>
+								<ul class="inner-tab tab-others" style="display: none;">
+									<li><span>჻</span><span>1CBF</span></li>
+									<li><span>ნ</span><span>1CBF</span></li>
+									<li><span>₾</span><span>1CBF</span></li>
 								</ul>
 								<ul class="inner-tab tab-1"></ul>
 								<ul class="inner-tab tab-1-2"></ul>
@@ -666,6 +672,7 @@
 				});
 			}
 			$('.tab-mtavruli').css('display', 'none');
+			$('.tab-others').css('display', 'none');
 			$('.tab-1').css('display', 'block');
 			$('.tab-1').html(res_1);
 			$('.tab-1-2').html(res_2);
@@ -676,6 +683,7 @@
 
 		function BuildMtavruli() {
 			$('.tab-mtavruli').css('display', 'block');
+			$('.tab-others').css('display', 'none');
 			$('.tab-1').css('display', 'none');
 		}
 
