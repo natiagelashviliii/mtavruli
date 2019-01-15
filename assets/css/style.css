@@ -1012,6 +1012,9 @@ section.panel:last-child{
   letter-spacing: 0.1em;
   color: #ff5252;
 }
+.skew-button:hover{
+  text-decoration: none;
+}
 .skew-button span {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -1023,6 +1026,7 @@ section.panel:last-child{
   height: 100%;
   padding: 20px 35px;
   z-index: 3;
+  color: #ff5252;
 }
 .skew-button:before,
 .skew-button span:before {
@@ -2022,4 +2026,8 @@ section.panel:last-child{
   .section-3 .block .text-container{
     width: 91%!important;
   }
+}
+
+.tab-mtavruli{
+  font-family: DejaVuSerif;
 }

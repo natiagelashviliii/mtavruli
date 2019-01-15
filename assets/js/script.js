@@ -904,18 +904,19 @@ jQuery(document).ready(function($) {
 
         switch($(this).data('attr')){
             case "tab-1":
-                buildTab(tab_1_1, tab_1_2); 
+                buildTab(tab_1_1); 
             return false;
 
             case "tab-2":
-                buildTab(tab_2_1, tab_2_2);
+                buildTab(tab_2_1);
             return false;
 
             case "tab-3":
-                buildTab(tab_3_1, tab_3_1);
+                BuildMtavruli()
             return false;
 
             case "tab-4":
+                buildTab(tab_4_1);
             return false;
         }
 
