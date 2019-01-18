@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     /*position: relative;*/
     /*cursor: url(../img/circle2.png), url(../img/circle.jpg), auto;*/
 }
@@ -69,6 +69,9 @@ html, body {
         display: block;
     width: 100%;
     text-align: center;
+}
+.progress.blue{
+  display: none;
 }
 
 

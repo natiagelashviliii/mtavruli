@@ -1,6 +1,6 @@
 var myScroll = $("html").easeScroll({
   frameRate: 60,
-  animationTime: 1000,
+  animationTime: 1500,
   stepSize: 120,
   pulseAlgorithm: 1,
   pulseScale: 8,
@@ -12,7 +12,6 @@ var myScroll = $("html").easeScroll({
   touchpadSupport: true,
   fixedBackground: true
 });
-console.log($(window).width());
 
 if ($(window).width() > 991) {
 
@@ -821,6 +820,7 @@ var TxtType = function(el, toRotate, period) {
                 setTimeout(function() {
                     $(".loading-page").fadeOut(1500, function() { 
                         $(this).remove();
+                        // $('.progress.blue').css('display', 'block');
                         rev0.reveal();
                         rev0_1.reveal();
                         $('.scroll-down').addClass('scroll-down-fade');
